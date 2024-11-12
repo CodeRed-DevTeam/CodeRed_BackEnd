@@ -10,6 +10,8 @@ import Portal from "./src/screens/Portal";
 import AdminLogin from "./src/screens/AdminLogin";
 import { useFonts } from "expo-font";
 
+// testing daw if connect sa backend.. hehe
+
 const Stack = createNativeStackNavigator();
 
 export default function App({navigation}) {
