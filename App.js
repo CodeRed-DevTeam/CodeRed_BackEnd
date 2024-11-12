@@ -6,6 +6,8 @@ import Login from "./src/screens/Login";
 import RecoverPass from "./src/screens/RecoverPass";
 import Register from "./src/screens/Register";
 import Profile from "./src/screens/Profile";
+import Portal from "./src/screens/Portal";
+import AdminLogin from "./src/screens/AdminLogin";
 import { useFonts } from "expo-font";
 
 const Stack = createNativeStackNavigator();
@@ -22,7 +24,9 @@ export default function App({navigation}) {
   return (
     <NavigationContainer style={[styles.container, { backgroundColor: 'white' }]}>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="Portal" component={Portal} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="AdminLogin" component={AdminLogin} />
         <Stack.Screen name="Profile" component={Profile} />
         <Stack.Screen name="RecoverPass" component={RecoverPass} />
         <Stack.Screen name="Register" component={Register} />

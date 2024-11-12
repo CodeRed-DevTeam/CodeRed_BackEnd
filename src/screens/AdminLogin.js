@@ -5,7 +5,7 @@ import { TextInput, Button } from "react-native-paper";
 import {Ionicons} from "@expo/vector-icons"; 
 import ReturnButtons from "../components/returnButtons"; 
 
-const Login = ({ navigation }) => {
+const AdminLogin = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -43,7 +43,7 @@ const Login = ({ navigation }) => {
         <ReturnButtons onPress={() => navigation.goBack()} />
         <Image source={codered} style={[styles.logoImage, { width: logoSize, height: logoSize }]} />
         <View style={loginStyle.header}>
-          <Text style={loginStyle.headingTitle}>Welcome, Pulse!</Text>
+          <Text style={loginStyle.headingTitle}>Welcome, Admin!</Text>
           <Text style={loginStyle.subheadingTitle}>
             Find Blood with Speed, Be the Hope They Need!
           </Text>
@@ -51,7 +51,7 @@ const Login = ({ navigation }) => {
         </View>
         <View>
           <TextInput
-            label="EMAIL"
+            label="ADMIN ID"
             value={email}
             mode="outlined"
             activeOutlineColor="red"
@@ -162,6 +162,6 @@ const Login = ({ navigation }) => {
   );
 };
 
-export default Login;
+export default AdminLogin;
 
 const loginStyle = StyleSheet.create(styles);
